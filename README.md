@@ -8,3 +8,6 @@ cd scandiweb-test
 npm install
 npm start
 </pre>
+
+**Demo:**
+http://skyjet.lv/projects/scandiweb-test/
