@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  background: #fafafa;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  transform: translateX(calc(var(--slide) * -100%));
+  transition: 0.3s;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carousel-area {
+  width: 500px;
+}
+
+.carousel {
+  overflow-x: hidden;
+  display: flex;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #ebebeb;
+}
+
+.btn {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+.btn i {
+  font-size: 25px;
+  color: rgba(130, 135, 136, 0.5);
+}
+
+.nextBtn {
+  right: 0;
+}
+
+.btn:disabled {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@media (hover: none) {
+  .btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .carousel-area {
+    max-width: 350px;
+  }
+}
